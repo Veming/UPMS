@@ -46,7 +46,7 @@ public class FunctionServlet extends HttpServlet {
         FunctionService fs = new FunctionService();
 
         boolean ifDelete = fs.deleteFunctionByFid(fid);
-        System.out.printf("ifDelete"+"FunctionServlet");
+        System.out.printf(ifDelete+"FunctionServlet");
     }
 
     private void search(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -431,60 +431,42 @@
 
       <!-- content main container -->
       <div class="main">
+        <section class="tile cornered">
 
-        <!-- row -->
-        <div class="row">
-
-
-          <section class="tile">
-
-
-            <!-- tile header -->
-            <div class="tile-header transparent">
-              <h1><strong>功能</strong> 列表 </h1>
-              <div class="controls">
-                <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
-                <a href="#" class="remove"><i class="fa fa-times"></i></a>
-              </div>
+          <div class="tile-header transparent">
+            <h1>“<strong>营销员</strong>”角色功能列表</h1>
+            <div class="controls">
+              <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+              <a href="#" class="remove"><i class="fa fa-times"></i></a>
             </div>
-            <!-- /tile header -->
+          </div>
 
-            <div class="action text-center" style="margin-left: 1500px;"><a href="#">AddFunction</a></div>
-            <!-- tile body -->
-            <div class="tile-body nopadding">
+          <div class="action text-center" style="margin-left: 1500px;"><a href="#">AddFunction</a></div>
+          <div class="tile-body nopadding">
 
-              <div class="table-responsive">
-                <table  class="table table-datatable table-bordered" id="inlineEditDataTable">
-                  <thead>
-                  <tr>
-                    <th class="sort-alpha">功能名称</th>
-                    <th class="sort-numeric" width="100px">功能ID</th>
-                    <th class="no-sort">功能描述</th>
-                    <th class="no-sort">Actions</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr class="odd gradeX">
-                    <td>车间管理功能</td>
-                    <td class="text-center">1</td>
-                    <td>车间管理（Workshop management）是指对车间所从事的各项生产经营活动进行计划、组织、指挥、协调和控制的一系列管理工作。车间管理的主要任务是：健全车间生产组织、合理组织生产、完善车间管理制度等。</td>
-                    <td class="actions text-center">
-                      <a class="edit" href="#">Edit</a>
-                      <a class="delete" href="#">Delete</a>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="table-responsive">
+              <table  class="table table-datatable table-bordered" id="inlineEditDataTable">
+                <thead>
+                <tr>
+                  <th class="sort-alpha">功能名称</th>
+                  <th class="sort-amount">功能描述</th>
+                  <th class="no-sort">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd gradeX">
+                  <td>提交货单</td>
+                  <td>进出货时需要对货物进行登记，此时需要管理人员提交货单</td>
 
+                  <td class="actions text-center"  width="150px"><a class="edit" href="#">Edit</a><a class="delete" href="#">Delete</a></td>
+                </tr>
+                </tbody>
+              </table>
             </div>
-            <!-- /tile body -->
 
+          </div>
 
-
-          </section>
-
-        </div>
+        </section>
 
 
 
