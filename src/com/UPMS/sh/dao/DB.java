@@ -23,7 +23,7 @@ public class DB {
     private String driver="com.mysql.jdbc.Driver";
     private String url="jdbc:mysql://localhost:3306/UPMS";
     private String user="root";
-    private String password="07092115";
+    private String password="root";
 
     public DB(){
         try {
