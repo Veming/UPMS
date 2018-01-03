@@ -58,5 +58,10 @@ public class FunctionService {
         if (n > 0)return true;
         else return false;
     }
-
+    public ArrayList<Function> getFunctionAll(){
+        String sql = "SELECT `fid`, `fname`, `description` FROM `upms`.`funtion`";
+        List<Map<String ,String>> maps = di.getList(sql);
+        ArrayList<Function> functions = map2Function(maps);
+        return functions;
+    }
 }
