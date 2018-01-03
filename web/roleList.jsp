@@ -443,7 +443,7 @@
             </div>
           </div>
 
-          <div class="action text-center" style="margin-left: 1500px;"><a href="#">AddRole</a></div>
+          <div class="action text-center" style="margin-left: 80%;"><a href="#">AddRole</a></div>
           <div class="tile-body nopadding">
 
             <div class="table-responsive">
