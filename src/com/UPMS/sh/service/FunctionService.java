@@ -64,4 +64,15 @@ public class FunctionService {
         ArrayList<Function> functions = map2Function(maps);
         return functions;
     }
+
+    public boolean isExist(String fname){
+        FunctionService fs = new FunctionService();
+        ArrayList<Function> functions = fs.getFunctionByName(fname);
+        if (functions.size()==0){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 }
