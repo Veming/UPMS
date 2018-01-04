@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Created by wcy on 2018/1/3.
  */
-@WebServlet(name = "AddFunctionServlet")
+@WebServlet("/AddFunctionServlet.html")
 public class AddFunctionServlet extends HttpServlet {
     @Override
     public void service(ServletRequest request , ServletResponse response) throws ServletException, IOException {
@@ -52,7 +52,7 @@ public class AddFunctionServlet extends HttpServlet {
         }
         else {
             request.setAttribute("message","已有该功能");
-            request.getRequestDispatcher("/addFunction.jsp").forward(request,response);
+            request.getRequestDispatcher("/AddFunction.jsp").forward(request,response);
             return;
         }
 
