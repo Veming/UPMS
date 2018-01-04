@@ -443,7 +443,7 @@
                   </div>
                 </div >
                 <div class="tile-body" >
-                  <form class="form-horizontal" role="form" action="/function.html?method=edit">
+                  <form class="form-horizontal" role="form" action="/function.html?method=edit" method="post">
                     <%--修改功能 目标Servlet：function 方法：add 传递参数：fname description 获取参数：function 参数类型：Function--%>
                     <div class="form-group">
                       <label for="fname" class="col-sm-4 control-label">功能名称</label>

@@ -21,7 +21,7 @@ public class DB {
     protected Statement stmt;
     protected ResultSet rs;
     private String driver="com.mysql.jdbc.Driver";
-    private String url="jdbc:mysql://localhost:3306/UPMS";
+    private String url="jdbc:mysql://localhost:3306/upms";
     private String user="root";
     private String password="root";
 

@@ -442,7 +442,7 @@
               </div>
             </div >
             <div class="tile-body" >
-              <form class="form-horizontal" role="form" action="/function.html?method=add">
+              <form class="form-horizontal" role="form" action="/function.html?method=add" method="post">
                 <%--新增用户 目标Servlet：function 方法：add 传递参数：fname description 注意事项：功能ID（fid）数据库层面自动递增--%>
                 <div class="form-group">
                   <label for="fname" class="col-sm-4 control-label">功能名称</label>

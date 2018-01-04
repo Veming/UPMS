@@ -1,8 +1,8 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><!DOCTYPE html>
 <html>
+
 <head>
   <title>Minoral 1.3 - Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,29 +30,23 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
 </head>
+
 <body class="brownish-scheme">
 
 <!-- Preloader -->
-<div class="mask"><div id="loader"></div></div>
+<div class="mask">
+  <div id="loader"></div>
+</div>
 <!--/Preloader -->
 
 <!-- Wrap all page content here -->
 <div id="wrap">
 
-
-
-
   <!-- Make page fluid -->
   <div class="row">
 
-
-
-
-
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-
-
 
       <!-- Branding -->
       <div class="navbar-header col-md-2">
@@ -67,18 +61,11 @@
       </div>
       <!-- Branding end -->
 
-
       <!-- .nav-collapse -->
       <div class="navbar-collapse">
 
-
-
-
         <!-- Content collapsing at 768px to sidebar -->
         <div class="collapsing-content">
-
-
-
 
           <!-- Quick Actions -->
           <ul class="nav navbar-nav">
@@ -93,7 +80,8 @@
                 <span class="overlay-label green">5</span>
               </a>
               <ul class="dropdown-menu wide arrow green nopadding">
-                <li><h1>You have <strong>5</strong> new tasks</h1></li>
+                <li>
+                  <h1>You have <strong>5</strong> new tasks</h1></li>
                 <li>
                   <a href="#">
                     <div class="task-info">
@@ -159,7 +147,9 @@
                     </div>
                   </a>
                 </li>
-                <li><a href="#">Check all tasks <i class="fa fa-angle-right"></i></a></li>
+                <li>
+                  <a href="#">Check all tasks <i class="fa fa-angle-right"></i></a>
+                </li>
               </ul>
             </li>
 
@@ -169,49 +159,47 @@
                 <span class="overlay-label orange">12</span>
               </a>
               <ul class="dropdown-menu wide arrow orange nopadding">
-                <li><h1>You have <strong>12</strong> new notifications</h1></li>
+                <li>
+                  <h1>You have <strong>12</strong> new notifications</h1></li>
 
                 <li>
                   <a href="#">
-                    <span class="label label-green"><i class="fa fa-user"></i></span>
-                    New user registered.
+                    <span class="label label-green"><i class="fa fa-user"></i></span> New user registered.
                     <span class="small">18 mins</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <span class="label label-red"><i class="fa fa-power-off"></i></span>
-                    Server down.
+                    <span class="label label-red"><i class="fa fa-power-off"></i></span> Server down.
                     <span class="small">27 mins</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <span class="label label-orange"><i class="fa fa-plus"></i></span>
-                    New order.
+                    <span class="label label-orange"><i class="fa fa-plus"></i></span> New order.
                     <span class="small">36 mins</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <span class="label label-cyan"><i class="fa fa-power-off"></i></span>
-                    Server restared.
+                    <span class="label label-cyan"><i class="fa fa-power-off"></i></span> Server restared.
                     <span class="small">45 mins</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <span class="label label-amethyst"><i class="fa fa-power-off"></i></span>
-                    Server started.
+                    <span class="label label-amethyst"><i class="fa fa-power-off"></i></span> Server started.
                     <span class="small">50 mins</span>
                   </a>
                 </li>
 
-                <li><a href="#">Check all notifications <i class="fa fa-angle-right"></i></a></li>
+                <li>
+                  <a href="#">Check all notifications <i class="fa fa-angle-right"></i></a>
+                </li>
               </ul>
             </li>
 
@@ -219,7 +207,6 @@
           <!-- User Controls -->
           <div class="user-controls">
             <ul>
-
 
               <li class="dropdown messages">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -240,14 +227,30 @@
                   <li>
                     <h3>Color schemes:</h3>
                     <ul id="color-schemes">
-                      <li><a href="#" class="brownish-scheme" title="Brownish"></a></li>
-                      <li><a href="#" class="darkgrey-scheme" title="Dark Grey"></a></li>
-                      <li><a href="#" class="lightgrey-scheme" title="Light Grey"></a></li>
-                      <li><a href="#" class="cyan-scheme" title="Cyan"></a></li>
-                      <li><a href="#" class="red-scheme" title="Red"></a></li>
-                      <li><a href="#" class="orange-scheme" title="Orange"></a></li>
-                      <li><a href="#" class="green-scheme" title="Green"></a></li>
-                      <li><a href="#" class="amethyst-scheme" title="Amethyst"></a></li>
+                      <li>
+                        <a href="#" class="brownish-scheme" title="Brownish"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="darkgrey-scheme" title="Dark Grey"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="lightgrey-scheme" title="Light Grey"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="cyan-scheme" title="Cyan"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="red-scheme" title="Red"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="orange-scheme" title="Orange"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="green-scheme" title="Green"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="amethyst-scheme" title="Amethyst"></a>
+                      </li>
                     </ul>
                   </li>
 
@@ -269,14 +272,8 @@
           </div>
           <!-- User Controls end -->
 
-
-
-
-
         </div>
         <!-- /Content collapsing at 768px to sidebar -->
-
-
 
         <!-- Sidebar -->
         <ul class="nav navbar-nav side-nav" id="navigation">
@@ -311,7 +308,6 @@
                   </li>
                 </ul>
 
-
               </div>
             </div>
           </li>
@@ -323,8 +319,7 @@
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Dashboard">
-              <i class="fa fa-user"><span class="overlay-label drank"></span></i>
-              人员管理 <b class="fa fa-angle-left dropdown-arrow"></b>
+              <i class="fa fa-user"><span class="overlay-label drank"></span></i> 人员管理 <b class="fa fa-angle-left dropdown-arrow"></b>
             </a>
             <ul class="dropdown-menu">
               <li>
@@ -348,32 +343,27 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Forms">
               <i class="fa fa-list">
                 <span class="overlay-label green"></span>
-              </i>
-              角色管理 <b class="fa fa-angle-left dropdown-arrow"></b>
+              </i> 角色管理 <b class="fa fa-angle-left dropdown-arrow"></b>
             </a>
             <ul class="dropdown-menu">
               <li>
                 <a href="#" title="Common Elements">
-                  <i class="fa fa-thumb-tack"><span class="overlay-label green80"></span></i>
-                  创建新角色
+                  <i class="fa fa-thumb-tack"><span class="overlay-label green80"></span></i> 创建新角色
                 </a>
               </li>
               <li>
                 <a href="#" title="Validation">
-                  <i class="fa fa-check-square"><span class="overlay-label green60"></span></i>
-                  角色列表
+                  <i class="fa fa-check-square"><span class="overlay-label green60"></span></i> 角色列表
                 </a>
               </li>
               <li>
-                <a href="#"  title="Form Wizard">
-                  <i class="fa fa-shield"><span class="overlay-label green40"></span></i>
-                  角色修改
+                <a href="#" title="Form Wizard">
+                  <i class="fa fa-shield"><span class="overlay-label green40"></span></i> 角色修改
                 </a>
               </li>
               <li>
                 <a href="#" title="Tiles">
-                  <i class="fa fa-th"><span class="overlay-label green20"></span></i>
-                  角色功能
+                  <i class="fa fa-th"><span class="overlay-label green20"></span></i> 角色功能
                 </a>
               </li>
             </ul>
@@ -382,26 +372,22 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Interface">
               <i class="fa fa-pencil">
                 <span class="overlay-label amethyst"></span>
-              </i>
-              功能管理 <b class="fa fa-angle-left dropdown-arrow"></b>
+              </i> 功能管理 <b class="fa fa-angle-left dropdown-arrow"></b>
             </a>
             <ul class="dropdown-menu">
               <li>
                 <a href="#" title="UI Elements">
-                  <i class="fa fa-puzzle-piece"><span class="overlay-label amethyst80"></span></i>
-                  新增功能
+                  <i class="fa fa-puzzle-piece"><span class="overlay-label amethyst80"></span></i> 新增功能
                 </a>
               </li>
               <li>
                 <a href="#" title="Typography">
-                  <i class="fa fa-font"><span class="overlay-label amethyst60"></span></i>
-                  功能列表
+                  <i class="fa fa-font"><span class="overlay-label amethyst60"></span></i> 功能列表
                 </a>
               </li>
               <li>
                 <a href="#" title="Nestable Lists">
-                  <i class="fa fa-arrows"><span class="overlay-label amethyst40"></span></i>
-                  修改功能
+                  <i class="fa fa-arrows"><span class="overlay-label amethyst40"></span></i> 修改功能
                 </a>
               </li>
             </ul>
@@ -409,45 +395,39 @@
         </ul>
         <!-- Sidebar end -->
 
-
-
-
-
       </div>
       <!--/.nav-collapse -->
-
-
-
-
 
     </div>
     <!-- Fixed navbar end -->
 
-
-
-
-
-
     <!-- Page content -->
     <div id="content" class="col-md-12">
-
 
       <!-- content main container -->
       <div class="main">
         <section class="tile cornered">
 
           <div class="tile-header transparent">
-            <h1>“<strong>营销员</strong>”角色功能列表</h1>
+            <h1>“<strong>${rname}</strong>”角色功能列表</h1>
             <div class="controls">
               <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
               <a href="#" class="remove"><i class="fa fa-times"></i></a>
             </div>
           </div>
-          <div class="action text-center" style="margin-left: 80%;"><a href="/roleFunction.html?method=add&rid=${role.rid}">AddFunction</a></div>
+          <form action="#" method="post" style="margin-left: 80%;">
+            <div class="btn-group margin-bottom-20">
+              <select class="btn btn-default dropdown-toggle" name="fid">
+                <option value="">添加功能</option>
+                <option value="${fid}">${fname}</option>
+              </select>
+              <input style="margin-left:10px; margin-top:3px ;" type="button" value="AddFunction"/>
+            </div>
+          </form>
           <div class="tile-body nopadding">
 
             <div class="table-responsive">
-              <table  class="table table-datatable table-bordered" id="inlineEditDataTable">
+              <table class="table table-datatable table-bordered" id="inlineEditDataTable">
                 <thead>
                 <tr>
                   <th class="sort-alpha">功能名称</th>
@@ -456,11 +436,17 @@
                 </tr>
                 </thead>
                 <tbody>
+                <c:forEach items="roles" var="role">
+
+                </c:forEach>
                 <tr class="odd gradeX">
                   <td>提交货单</td>
                   <td>进出货时需要对货物进行登记，此时需要管理人员提交货单</td>
 
-                  <td class="actions text-center"  width="150px"><a class="edit" href="#">Edit</a><a class="delete" href="#">Delete</a></td>
+                  <td class="actions text-center" width="150px">
+                    <a class="edit" href="#">Edit</a>
+                    <a class="delete" href="#">Delete</a>
+                  </td>
                 </tr>
                 </tbody>
               </table>
@@ -470,25 +456,14 @@
 
         </section>
 
-
-
-
-
-
-
-
       </div>
       <!-- /content container -->
 
     </div>
     <!-- Page content end -->
 
-
   </div>
   <!-- Make page fluid-->
-
-
-
 
 </div>
 <!-- Wrap all page content end -->
@@ -531,4 +506,5 @@
 
 <script src="js/minoral.js"></script>
 </body>
+
 </html>

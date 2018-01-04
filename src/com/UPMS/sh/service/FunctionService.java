@@ -30,16 +30,15 @@ public class FunctionService {
     }
 
     public ArrayList<Function> getFunctionByName(String fname){
-        String sql = "SELECT `fid`, `fname`, `description` FROM `upms`.`funtion` WHERE `fname`="+fname;
+        String sql = "SELECT `fid`, `fname`, `description` FROM `upms`.`funtion` WHERE fname like '%"+fname+"%'";
         List<Map<String ,String>> maps = di.getList(sql);
         ArrayList<Function> functions = map2Function(maps);
         return functions;
     }
 
     public boolean editFunctionByFid(Function function){
-        String sql = "UPDATE `upms`.`funtion` SET  `fname`="+
-                function.getFname()+", `description`="+
-                function.getDescription()+" WHERE (`fid`="+function.getDescription()+")";
+        String sql = "UPDATE `upms`.`funtion` SET  `fname`= '"+ function.getFname()
+                +"', `description`='"+ function.getDescription()+"' WHERE (`fid`="+function.getFid()+")";
         int n = di.update(sql);
         if (n > 0)return true;
         else return false;
@@ -53,7 +52,7 @@ public class FunctionService {
     }
 
     public boolean insertFunction(Function function){
-        String sql = "INSERT INTO `upms`.`funtion` (`fid`, `fname`, `description`) VALUES ("+function.getFid()+", "+function.getFname()+", "+function.getDescription()+")";
+        String sql = "INSERT into funtion (`fname`, `description`) VALUES ('"+function.getFname()+"','"+function.getDescription()+"')" ;
         int n = di.update(sql);
         if (n > 0)return true;
         else return false;
