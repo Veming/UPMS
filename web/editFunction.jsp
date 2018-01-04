@@ -434,50 +434,40 @@
           <!-- content main container -->
           <div class="main">
             <div class="col-md-6">
-            	
-<section class="tile">
-
-  <div class="tile-header">
-    <h1>新增<strong>功能</strong></h1>
-    <div class="controls">
-      <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
-      <a href="#" class="remove"><i class="fa fa-times"></i></a>
-    </div>
-  </div >
-  
-  <div class="tile-body" >
-                      
-    <form class="form-horizontal" role="form" action="#" >
-      
-      <div class="form-group">
-        <label for="fname" class="col-sm-4 control-label">功能名称</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="fname">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="input05" class="col-sm-4 control-label">功能描述</label>
-        <div class="col-sm-8">
-          <textarea class="form-control" id="input05" rows="3"></textarea>
-          <span class="help-block">简述功能的作用，小于200字</span>
-        </div>
-      </div>
-
-      <div class="form-group form-footer">
-        <div class="col-sm-offset-4 col-sm-8">
-          <button type="submit" class="btn btn-primary">保存信息</button>
-          <button type="reset" class="btn btn-default">重置信息</button>
-        </div>
-      </div>
-
-    </form>
-
-  </div>
-
-</section>
-			
-
+              <section class="tile">
+                <div class="tile-header">
+                  <h1>修改<strong>功能</strong></h1>
+                  <div class="controls">
+                    <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+                    <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                  </div>
+                </div >
+                <div class="tile-body" >
+                  <form class="form-horizontal" role="form" action="/function.html?method=edit">
+                    <%--修改功能 目标Servlet：function 方法：add 传递参数：fname description 获取参数：function 参数类型：Function--%>
+                    <div class="form-group">
+                      <label for="fname" class="col-sm-4 control-label">功能名称</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="fname" name="fname" value="${function.fname}">
+                        <input type="hidden" name="fid" value="${function.fid}">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="description" class="col-sm-4 control-label">功能描述</label>
+                      <div class="col-sm-8">
+                        <textarea class="form-control" id="description" name="description" rows="3" value="${function.description}"></textarea>
+                        <span class="help-block">简述功能的作用，小于200字</span>
+                      </div>
+                    </div>
+                    <div class="form-group form-footer">
+                      <div class="col-sm-offset-4 col-sm-8">
+                        <button type="submit" class="btn btn-primary">保存信息</button>
+                        <button type="reset" class="btn btn-default">重置信息</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
 
             </div>
 

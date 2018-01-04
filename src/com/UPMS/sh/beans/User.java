@@ -3,20 +3,6 @@ package com.UPMS.sh.beans;
 import java.util.Date;
 
 public class User {
-    /*  uid
-        rid
-        oid
-        username
-        password
-        name
-        mobile
-        email
-        gen_time
-        login_time
-        last_login_time
-        counter
-    */
-
 
 
     private int uid;
@@ -31,6 +17,16 @@ public class User {
     private Date login_time;
     private Date last_login_time;
     private int count;
+
+    private String rname;
+
+    public String getRname() {
+        return rname;
+    }
+
+    public void setRname(String rname) {
+        this.rname = rname;
+    }
 
     public int getUid() {
         return uid;

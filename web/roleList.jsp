@@ -442,7 +442,8 @@
               <a href="#" class="remove"><i class="fa fa-times"></i></a>
             </div>
           </div>
-          <form class="form-horizontal" role="form" action="#">
+          <%--角色查询 目标Servlet：user.html 方法：searchByRname 参数：ranme --%>
+          <form class="form-horizontal" role="form" action="/user.html?method=searchByRname">
             <div class="form-group">
               <label for="rname" class="col-sm-2 control-label">角色查询</label></label>
               <div class="col-sm-2" style="width: 30%;">
@@ -451,9 +452,9 @@
               </div>
             </div>
           </form>
-          <div class="action text-center" style="margin-left: 80%;"><a href="#">AddRole</a></div>
+          <%--添加新角色 目标Servlet：user.html 方法：toAdd 参数：无--%>
+          <div class="action text-center" style="margin-left: 80%;"><a href="/user.html?method=toAdd">AddRole</a></div>
           <div class="tile-body nopadding">
-
             <div class="table-responsive">
               <table  class="table table-datatable table-bordered" id="inlineEditDataTable">
                 <thead>
@@ -466,14 +467,22 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="odd gradeX">
-                  <td>营销员</td>
-                  <td>2018-1-3</td>
-                  <td>营销部门员工</td>
-                  <td class="text-center"><a href="#">查看权限</a></td>
-
-                  <td class="actions text-center"  width="150px"><a class="edit" href="#">Edit</a><a class="delete" href="#">Delete</a></td>
-                </tr>
+                <c:forEach var="role" items="roles">
+                  <tr class="odd gradeX">
+                      <%--角色 目标Servlet：user.html 方法：searchRoleAll 数据名称：roles 参数：无--%>
+                    <td>${role.rname}</td>
+                    <td>${role.gen_time}</td>
+                    <td>${role.description}</td>
+                      <%--查看权限 目标Servlet：user.html 方法：searchFunctionByRid 参数：rid --%>
+                    <td class="text-center"><a href="/role.html?method=searchFunctionByRid&rid=${role.rid}">查看权限</a></td>
+                    <td class="actions text-center"  width="150px">
+                        <%--修改角色 目标Servlet：user.html 方法：toEdit 参数：rid--%>
+                      <a class="edit" href="/user.html?method=toEdit&rid=${role.rid}">Edit</a>
+                            <%--删除角色 目标Servlet：user.html 方法：delete 参数：rid--%>
+                          <a class="delete" href="/user.html?method=delete&rid=${role.rid}">Delete</a>
+                    </td>
+                  </tr>
+                </c:forEach>
                 </tbody>
               </table>
             </div>

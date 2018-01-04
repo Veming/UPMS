@@ -450,7 +450,8 @@
               </div>
             </div>
             <!-- /tile header -->
-            <form class="form-horizontal" role="form" action="#">
+            <%--目标Servlet：function.html 方法：searchByFname  传递参数：fname--%>
+            <form class="form-horizontal" role="form" action="/function.html?method=searchByFname">
               <div class="form-group">
                 <label for="fname" class="col-sm-2 control-label">功能查询</label></label>
                 <div class="col-sm-2" style="width: 30%;">
@@ -459,7 +460,10 @@
                 </div>
               </div>
             </form>
-            <div class="action text-center" style="margin-left: 80%;"><a href="#">AddFunction</a></div>
+            <div class="action text-center" style="margin-left: 80%;">
+              <%--目标Servlet：function.html 方法：toAdd  传递参数：无--%>
+              <a href="/function.html?method=toAdd">AddFunction</a>
+            </div>
             <!-- tile body -->
             <div class="tile-body nopadding">
 
@@ -474,15 +478,20 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr class="odd gradeX">
-                    <td>车间管理功能</td>
-                    <td class="text-center">1</td>
-                    <td>车间管理（Workshop management）是指对车间所从事的各项生产经营活动进行计划、组织、指挥、协调和控制的一系列管理工作。车间管理的主要任务是：健全车间生产组织、合理组织生产、完善车间管理制度等。</td>
-                    <td class="actions text-center">
-                      <a class="edit" href="#">Edit</a>
-                      <a class="delete" href="#">Delete</a>
-                    </td>
-                  </tr>
+                  <%--需要获取数据：functions 数据类型：ArrayList--%>
+                  <c:forEach var="function" items="functions">
+                    <tr class="odd gradeX">
+                      <td>${function.fname}</td>
+                      <td class="text-center">${function.fid}</td>
+                      <td>${function.description}</td>
+                      <td class="actions text-center">
+                          <%--目标Servlet：function.html 方法：toEdit 传递参数：fid--%>
+                          <a class="edit" href="/function.html?method=toEdit&fid=${function.fid}">Edit</a>
+                          <%--目标Servlet：function.html 方法：delete 传递参数：fid--%>
+                          <a class="delete" href="/function.html?method=delete&fid=${function.fid}">Delete</a>
+                      </td>
+                    </tr>
+                  </c:forEach>
                   </tbody>
                 </table>
               </div>

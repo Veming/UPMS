@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -407,18 +408,19 @@
 
 								<!-- tile header -->
 								<div class="tile-header transparent">
-									<h1><strong>功能</strong> 列表 </h1>
+									<h1><strong>员工</strong> 列表 </h1>
 									<div class="controls">
 										<a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
 										<a href="#" class="remove"><i class="fa fa-times"></i></a>
 									</div>
 								</div>
 								<!-- /tile header -->
-								<form class="form-horizontal" role="form" action="#">
+								<!--功能查询 目标Servlet为user.html 方法为 searchByName 可获得值为 name-->
+								<form class="form-horizontal" role="form" action="/user.html?method=serachByName" method="post">
 									<div class="form-group">
-										<label for="fname" class="col-sm-2 control-label">人员查询</label></label>
+										<label for="name" class="col-sm-2 control-label">员工查询</label></label>
 										<div class="col-sm-2" style="width: 30%;">
-											<input type="text" class="form-control" id="uname" name="uname" style="width: 70%; margin-right: 0;" />
+											<input type="text" class="form-control" id="name" name="name" style="width: 70%; margin-right: 0;" />
 											<button type="submit" class="btn btn-primary" style="width: 32%; top: 0; right: 0; position: absolute; height: 37px;">Submit</button>
 										</div>
 									</div>
@@ -438,6 +440,7 @@
 													<th class="no-sort">员工密码</th>
 													<th class="no-sort">手机号</th>
 													<th class="no-sort">电子邮箱</th>
+													<th class="no-sort">用户角色</th>
 													<th class="no-sort">创建时间</th>
 													<th class="sno-sort">登录时间</th>
 													<th class="no-sort">上次登录时间</th>
@@ -446,21 +449,27 @@
 												</tr>
 											</thead>
 											<tbody>
+											<%--获取数据的名称为 users 用户角色在Servlet中进行匹配--%>
+											<c:forEach var="user" items="${users}">
 												<tr class="odd gradeX">
-													<td>穆婉瑜</td>
-													<td >184624665</td>
-													<td>mwy254848723</td>
-													<td>18645241547</td>
-													<td>mwy254848723@gmail.com</td>
-													<td>2013-2-9 17:56:1</td>
-													<td>2018-1-9 8:24:22</td>
-													<td>2017-12-9 10:4:17</td>
-													<td>18</td>
+													<td>${user.name}</td>
+													<td>${user.username}</td>
+													<td>${user.password}</td>
+													<td>${user.mobile}</td>
+													<td>${user.email}</td>
+													<td>${user.rname}</td>
+													<td>${user.gen_time}</td>
+													<td>${user.login_time}</td>
+													<td>${user.last_login_time}</td>
+													<td>${user.count}</td>
 													<td class="actions text-center">
-														<a class="edit" href="#">Edit</a>
-														<a class="delete" href="#">Delete</a>
+														<a class="edit" href="/user.html?method=toEdit&uid=${user.uid}">Edit</a>
+															<%--目标Servlet：user.html 方法：toEdit 传递参数：uid--%>
+														<a class="delete" href="/user.html?method=delete&uid=${user.uid}">Delete</a>
+															<%--目标Servlet：user.html 方法：delete 传递参数：uid--%>
 													</td>
 												</tr>
+											</c:forEach>
 											</tbody>
 										</table>
 									</div>
