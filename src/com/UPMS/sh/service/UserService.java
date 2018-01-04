@@ -18,22 +18,23 @@ public class UserService {
         for (Map<String,String> map:maps){
             User user = new User();
             user.setUid(Integer.parseInt(map.get("uid")));
-            user.setOid(Integer.parseInt(map.get("oid")));
             user.setRid(Integer.parseInt(map.get("rid")));
+            user.setOid(Integer.parseInt(map.get("oid")));
             user.setUsername(map.get("username"));
-            user.setUsername(map.get("password"));
+            user.setPassword(map.get("password"));
             user.setName(map.get("name"));
             user.setMobile(map.get("mobile"));
             user.setEmail(map.get("email"));
             try {
                 user.setGen_time(sdf.parse(map.get("gen_time")));
-                user.setGen_time(sdf.parse(map.get("login_time")));
+                user.setLogin_time(sdf.parse(map.get("login_time")));
                 user.setLast_login_time(sdf.parse(map.get("last_login_time")));
             } catch (ParseException e) {
                 System.out.println("UserService->map2User->user.setXtime() error!!! ");
                 e.printStackTrace();
             }
             user.setCount(Integer.parseInt(map.get("count")));
+            users.add(user);
         }
         return users;
     }
@@ -45,34 +46,32 @@ public class UserService {
         return users;
     }
 
-    public ArrayList<User> getUserByUname(String uname){
-        String sql = "SELECT `uid`, `rid`, `oid`, `username`, `password`, `name`, `mobile`, `email`, `gen_time`, `login_time`, `last_login_time`, `count` FROM `upms`.`user` WHERE `uname` like %"+uname+"%";
+    public ArrayList<User> getUserByName(String name){
+        String sql = "SELECT `uid`, `rid`, `oid`, `username`, `password`, `name`, `mobile`, `email`, `gen_time`, `login_time`, `last_login_time`, `count` FROM `upms`.`user` WHERE `name` like '%"+name+"%'";
         List<Map<String ,String>> maps = di.getList(sql);
         ArrayList<User> users = map2User(maps);
+//        System.out.println(maps);
+//        System.out.println(users);
         return users;
     }
 
     public boolean insertUser(User user){
-        String sql = "INSERT INTO `upms`.`user` (`rid`, `oid`, `username`, `password`, `name`, `mobile`, `email`, `gen_time`, `login_time`, `last_login_time`, `count`) VALUES ("+
-                user.getRid()+", "+user.getOid()+", "+user.getUsername()+", "+user.getPassword()+", "+user.getName()+", "+user.getMobile()+
-        ", "+user.getEmail()+", "+sdf.format(user.getGen_time())+", "+sdf.format(user.getLogin_time())+", "+user.getLast_login_time()+", "+user.getCount()+")";
+        String sql = "INSERT INTO `upms`.`user` (`rid`, `username`, `password`, `name`, `mobile`, `email`, `gen_time`, `login_time`, `last_login_time`, `count`,oid) VALUES ("+
+                user.getRid()+",'"+user.getUsername()+"', '"+user.getPassword()+"', '"+user.getName()+"', '"+user.getMobile()+ "', '"+user.getEmail()+"', now(), now(), now(), 0,0)";
         int n = di.update(sql);
         if (n>0)return true;
         else return false;
     }
 
     public boolean editUserByUid(User user){
-        String sql = "UPDATE `upms`.`user` SET `oid`="+ user.getOid()+
-                ", `rid`="+user.getRid()+
+        String sql = "UPDATE `upms`.`user` SET "+
+                "  `rid`="+user.getRid()+
                 ", `username`="+user.getUsername()+
                 ", `password`="+user.getPassword()+
                 ", `name`="+user.getName()+
                 ", `mobile`="+user.getMobile()+
                 ", `email`="+user.getEmail()+
-                ", `gen_time`="+sdf.format(user.getGen_time())+
-                ", `login_time`="+sdf.format(user.getLogin_time())+
-                ", `last_login_time`="+user.getLast_login_time()+
-                ", `count`=NULL WHERE (`uid`="+user.getUid()+")";
+                " WHERE (`uid`="+user.getUid()+")";
         int n = di.update(sql);
         if (n>0)return true;
         else return false;
@@ -85,5 +84,12 @@ public class UserService {
         else return false;
     }
 
-
+    public ArrayList<User> getUserAll(){
+        String sql = "SELECT `uid`, `rid`, `oid`, `username`, `password`, `name`, `mobile`, `email`, `gen_time`, `login_time`, `last_login_time`, `count` FROM `upms`.`user`";
+        List<Map<String ,String>> maps = di.getList(sql);
+        ArrayList<User> users = map2User(maps);
+//        System.out.println(maps);
+//        System.out.println(users);
+        return users;
+    }
 }

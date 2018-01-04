@@ -25,12 +25,13 @@ public class RoleService {
                 System.out.println("RoleService->map2Role->Role.setGen_time() error!!! ");
                 e.printStackTrace();
             }
-
+            role.setDescription(map.get("description"));
+            roles.add(role);
         }
         return roles;
     }
 
-    public ArrayList<Role> getRoleByFid(int rid){
+    public ArrayList<Role> getRoleByRid(int rid){
         String sql = "SELECT `rid`, `rname`, `gen_time`, `description` FROM `upms`.`role` WHERE rid = "+rid;
         List<Map<String,String>> maps = di.getList(sql);
         ArrayList<Role> roles = map2Role(maps);
@@ -38,15 +39,14 @@ public class RoleService {
     }
 
     public ArrayList<Role> getRoleByRname(String rname){
-        String sql = "SELECT `rid`, `rname`, `gen_time`, `description` FROM `upms`.`role` WHERE rname like %"+rname+"%";
+        String sql = "SELECT `rid`, `rname`, `gen_time`, `description` FROM `upms`.`role` WHERE rname like '%"+rname+"%'";
         List<Map<String,String>> maps = di.getList(sql);
         ArrayList<Role> roles = map2Role(maps);
         return roles;
     }
 
     public boolean insertRole(Role role){
-        String sql = "INSERT INTO `upms`.`role` (`rname`, `gen_time`, `description`) VALUES ("+
-                role.getRname()+", "+sdf.format(role.getGen_time())+", "+role.getDescription()+")";
+        String sql = "INSERT INTO `upms`.`role` (`rname`, `gen_time`, `description`) VALUES ('"+role.getRname()+"', now(), '"+role.getDescription()+"')";
         int n = di.update(sql);
         if (n > 0)return true;
         else return false;
@@ -60,12 +60,19 @@ public class RoleService {
     }
 
     public boolean editRoleByRid(Role role){
-        String sql = "UPDATE `upms`.`role` SET `rname`="+
-                role.getRname()+", `gen_time`="+
-                sdf.format(role.getGen_time())+", `description`="+role.getDescription()+" WHERE (`rid`="+role.getRid()+")";
+        String sql = "UPDATE `upms`.`role` SET `rname`='"+
+                role.getRname()+"', `description`='"+role.getDescription()+"' WHERE (`rid`="+role.getRid()+")";
         int n = di.update(sql);
         if (n > 0)return true;
         else return false;
     }
 
+    public ArrayList<Role> getRoleAll(){
+        String sql = "SELECT `rid`, `rname`, `gen_time`, `description` FROM `upms`.`role` ";
+        List<Map<String ,String>> maps = di.getList(sql);
+//        System.out.println(maps);
+        ArrayList<Role> roles = map2Role(maps);
+//        System.out.println(roles);
+        return roles;
+    }
 }

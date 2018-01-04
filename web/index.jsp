@@ -319,76 +319,76 @@
                     </li>
 
                     <li>
-                        <a href="#" title="公司信息管理">
+                        <a href="/organization.html" title="公司信息管理">
                             <i class="fa fa-desktop"><span class="overlay-label orange"></span></i>公司信息管理
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="人员管理">
+                        <a href="/user.html" class="dropdown-toggle" data-toggle="dropdown" title="人员管理">
                             <i class="fa fa-user"><span class="overlay-label drank"></span></i> 人员管理 <b class="fa fa-angle-left dropdown-arrow"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" title="角色分配">
+                                <a href="/user.html" title="角色分配">
                                     <i class="fa fa-align-right"><span class="overlay-label drank80"></span></i> 角色分配
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="员工列表">
+                                <a href="/user.html" title="员工列表">
                                     <i class="fa fa-th"><span class="overlay-label drank60"></span></i>员工列表
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="人员修改">
+                                <a href="/user.html" title="人员修改">
                                     <i class="fa fa-pencil"><span class="overlay-label drank40"></span></i>人员修改
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="角色管理">
+                        <a href="/role.html" class="dropdown-toggle" data-toggle="dropdown" title="角色管理">
                             <i class="fa fa-list"><span class="overlay-label green"></span></i> 角色管理 <b class="fa fa-angle-left dropdown-arrow"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" title="创建新角色">
+                                <a href="/role.html" title="创建新角色">
                                     <i class="fa fa-thumb-tack"><span class="overlay-label green80"></span></i> 创建新角色
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="角色列表">
+                                <a href="/role.html" title="角色列表">
                                     <i class="fa fa-check-square"><span class="overlay-label green60"></span></i> 角色列表
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="角色修改">
+                                <a href="/role.html" title="角色修改">
                                     <i class="fa fa-shield"><span class="overlay-label green40"></span></i> 角色修改
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="角色功能">
+                                <a href="/role.html" title="角色功能">
                                     <i class="fa fa-th"><span class="overlay-label green20"></span></i> 角色功能
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="功能管理">
+                        <a href="/function.html" class="dropdown-toggle" data-toggle="dropdown" title="功能管理">
                             <i class="fa fa-pencil"><span class="overlay-label amethyst"></span></i> 功能管理 <b class="fa fa-angle-left dropdown-arrow"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" title="新增功能">
+                                <a href="/function.html" title="新增功能">
                                     <i class="fa fa-puzzle-piece"><span class="overlay-label amethyst80"></span></i> 新增功能
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="功能列表">
+                                <a href="/function.html" title="功能列表">
                                     <i class="fa fa-font"><span class="overlay-label amethyst60"></span></i> 功能列表
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="修改功能">
+                                <a href="/function.html" title="修改功能">
                                     <i class="fa fa-arrows"><span class="overlay-label amethyst40"></span></i> 修改功能
                                 </a>
                             </li>

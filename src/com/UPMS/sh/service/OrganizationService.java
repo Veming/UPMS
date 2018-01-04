@@ -73,4 +73,11 @@ public class OrganizationService {
         else return false;
     }
 
+    public ArrayList<Organization> getOranizationAll(){
+        String sql = "SELECT `oid`, `oname`, `gen_time`, `description`, `available` FROM `upms`.`organization`";
+        List<Map<String ,String>> maps = di.getList(sql);
+        ArrayList<Organization> organizations = map2Organization(maps);
+        return organizations;
+    }
+
 }
