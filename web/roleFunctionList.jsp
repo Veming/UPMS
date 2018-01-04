@@ -443,7 +443,7 @@
               <a href="#" class="remove"><i class="fa fa-times"></i></a>
             </div>
           </div>
-          <div class="action text-center" style="margin-left: 80%;"><a href="#">AddFunction</a></div>
+          <div class="action text-center" style="margin-left: 80%;"><a href="/roleFunction.html?method=add&rid=${role.rid}">AddFunction</a></div>
           <div class="tile-body nopadding">
 
             <div class="table-responsive">
