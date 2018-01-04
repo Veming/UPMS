@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><!DOCTYPE html>
 <html>
 <head>
   <title>Minoral 1.3 - Dashboard</title>
@@ -440,8 +442,16 @@
               <a href="#" class="remove"><i class="fa fa-times"></i></a>
             </div>
           </div>
-
-          <div class="action text-center" style="margin-left: 1500px;"><a href="#">AddRole</a></div>
+          <form class="form-horizontal" role="form" action="#">
+            <div class="form-group">
+              <label for="rname" class="col-sm-2 control-label">角色查询</label></label>
+              <div class="col-sm-2" style="width: 30%;">
+                <input type="text" class="form-control" id="fname" name="rname" style="width: 70%; margin-right: 0;"/>
+                <button type="submit" class="btn btn-primary" style="width: 32%; top: 0; right: 0; position: absolute; height: 37px;">Submit</button>
+              </div>
+            </div>
+          </form>
+          <div class="action text-center" style="margin-left: 80%;"><a href="#">AddRole</a></div>
           <div class="tile-body nopadding">
 
             <div class="table-responsive">
