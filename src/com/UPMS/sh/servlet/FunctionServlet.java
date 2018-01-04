@@ -23,42 +23,21 @@ public class FunctionServlet extends HttpServlet {
 
         if (null != method){
             if ("delete".equals(method)){
+
                 delete(request,response);
                 search(request,response);
                 return ;
+
             }
-            else if ("search".equals(method)){
+            if ("search".equals(method)){
                 search(request,response);
                 return;
             }
-            else if("add".equals(method)){
-                add(request,response);
-                return;
-            }
-            else if ("edit".equals(method)){
 
-            }
             searchAll(request,response);
         }
 
 
-
-    }
-
-    private void add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String  fname = request.getParameter("fname");
-        int fid = Integer.parseInt(request.getParameter("fid"));
-        String description = request.getParameter("description");
-
-        Function function = new Function();
-        FunctionService fs = new FunctionService();
-
-        function.setFid(fid);
-        function.setFname(fname);
-        function.setDescription(description);
-
-        fs.insertFunction(function);
-        request.getRequestDispatcher("/function.html").forward(request,response);
 
     }
 
